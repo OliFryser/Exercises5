@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "github.com/OliFryser/Exercises5/proto";
+
+package proto;
+
+service TimeService
+{
+    rpc GetServerTime (TimeRequest) returns (TimeResponse);
+}
+
+message TimeRequest {
+    string t1 = 1;
+}
+
+message TimeResponse {
+    string t2 = 1;
+    string t3 = 2;
+}
